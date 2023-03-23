@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    background-color: rgb(50, 50, 50);
+    width: 100%;
+    height: 10vh;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    position:relative;
+    
+}
+.navbar__logo{
+    font-size: 50px;
+    font-weight: 670;
+    font-family: cursive;
+    color: rgb(239, 17, 17);
+    margin-right: auto;
+}
+
+.navbar__menu{
+    display: flex;
+    gap: 40px;
+    margin-right: 40px;
+}
+.navbar__menu--link{
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 550;
+    color: #fff;
+}
+.navbar__menu--link:hover{
+    color: rgb(89, 86, 86);
+    transition: color 0.5s;
+}
+.navbar__input{
+    height: 40px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    background-color: rgba(255, 228, 196, 0);
+}
+.navbar__input:focus{
+    outline: none;
+}
+
+.burger{
+    border: none;
+    background-color: #dedada00;
+    display: none;
+}
+.burger__line{
+    width: 30px;
+    margin-bottom: 7px;
+    height: 3px;
+    background-color: rgb(196, 193, 189);
+    border: none;
+}
+@media screen and (max-width:768px){
+    .burger{
+        display: block;
+        position: absolute;
+        top: 22px;
+        right: 20px;
+    }
+    .navbar__menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color:rgb(50, 50, 50);
+        width: 50%;
+        height: 500px;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        margin-bottom: 40px;
+        transform: translateY(-150%);
+    }
+    .navbar__menu--link{
+        font-size: 25px;   
+    }
+    .navbar__input{
+        position: absolute;
+        top: 15px;
+        right: 80px;
+    }
+    .navbar__active{
+        transform: translateY(0);
+    }
+ 
+}
+@media screen and (max-width:576px){
+    .navbar__input{
+        display: none;
+    }
+}
